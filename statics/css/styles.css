@@ -1,0 +1,183 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Colores base */
+  --color-azul-inicio: #6EC1E4; /* Azul claro */
+  --color-azul-fin: #A7D8F0;    /* Azul más claro */
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f8f8f8;
+  padding: 15px;
+}
+
+/* Contenedor principal */
+.vcard {  
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  min-height: 540px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  background: white;
+}
+
+/* Fondo degradado azul */
+.amber-fade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 62%;
+  background: linear-gradient(to bottom, 
+    var(--color-azul-inicio) 0%,
+    var(--color-azul-fin) 60%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  z-index: 1;
+  opacity: 0.4;
+}
+
+/* Fondo de imagen */
+.bg-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/fondo.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2;
+  z-index: 2;
+}
+
+/* Contenido */
+.content {
+  position: relative;
+  z-index: 3;
+  padding: 15px 20px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Foto de perfil */
+.photo-frame {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 4px solid white;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  margin: 10px 0 5px;
+  background: #f1f1f1;
+}
+
+.photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Info */
+.info {
+  text-align: center;
+  margin: 5px 0 10px;
+}
+
+.info h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+.info h2 {
+  font-size: 16px;
+  color: #666;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+/* Redes sociales */
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 10px 0 15px;
+  flex-wrap: wrap;
+}
+
+.social a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+
+.social a:hover {
+  transform: translateY(-3px);
+}
+
+.linkedin { background: #0077B5; }
+.github { background: #333; }
+.email { background: #D44638; }
+.instagram { background: linear-gradient(45deg, #405DE6, #833AB4, #C13584, #E1306C, #FD1D1D); }
+.whatsapp { background: #25D366; }
+.x { background: black; } /* Botón X.com negro */
+
+/* Mensaje */
+.mensaje {
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: justify;
+  color: #555;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.05);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+}
+
+/* Botón guardar contacto */
+.guardar-contacto {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  z-index: 10;
+}
+
+.guardar-contacto a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: #4285F4;
+  color: white;
+  font-size: 1.2em;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.guardar-contacto a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
