@@ -2,7 +2,7 @@ import qrcode
 from PIL import Image
 
 # Configuración
-qr_data = "https://ramiju81.github.io/XCard/"
+qr_data = "https://womo-solucions.github.io/XCard/"
 qr_logo_path = "logo.png"
 qr_output_path = "QR_XD.png"
 html_output_path = "index.html"
